@@ -4,6 +4,7 @@ import java.util.List;
 public class App {
   public static void main(String[] args) {
     Console myConsole = System.console();
+    
     System.out.println("Enter a number:");
     String stringUserNumber = myConsole.readLine();
     int intUserNumber = Integer.parseInt(stringUserNumber);
