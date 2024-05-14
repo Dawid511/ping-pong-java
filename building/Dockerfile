@@ -10,7 +10,7 @@ RUN apt-get install git -y && \
     apt-get install gradle -y
 
 # Pobranie repozytorium z GitHuba
-RUN git clone https://github.com/joe-kramer/ping-pong-java
+RUN git clone https://github.com/Dawid511/ping-pong-java
 
 # Ustawienie katalogu roboczego na ping-pong-java
 WORKDIR /ping-pong-java
