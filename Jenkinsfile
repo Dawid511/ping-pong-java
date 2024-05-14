@@ -6,6 +6,15 @@ agent any
     }
 
     stages {
+
+        stage('Clear') {
+            steps{
+                sh '''
+                    chmod +x clear.sh
+                    ./clear.sh
+                '''
+            }
+        }
         
         stage('Checkout') {
             steps {
@@ -26,10 +35,19 @@ agent any
                  sh "docker build -t pong -f ./test/Dockerfile ."
             }
         }
+
+        stage('Deploy'){
+            steps{
+                echo "Deploy stage"
+                sh "docker build --no-cache  -t pong_deploy -f ./deploy/Dockerfile ."
+                sh "docker run --rm pong_deploy"
+            }
+        }
      
     }
+    
     post{
-        asuccess {
+        success {
             echo 'Success'
         }
         failure {
