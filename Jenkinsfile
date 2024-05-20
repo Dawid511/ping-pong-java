@@ -5,6 +5,7 @@ agent any
         pollSCM('* * * * *')
     }
 
+
     stages {
 
         stage('Clear') {
@@ -25,27 +26,26 @@ agent any
         stage('Build') {
             steps {
                 echo "Build stage"
-                sh "docker build -t pong -f ./building/Dockerfile ."
+                sh "docker build -t build_stage -f ./building/Dockerfile ."
             }
         }
 
         stage('Test') {
             steps {
                 echo "Test stage"
-                 sh "docker build -t pong -f ./test/Dockerfile ."
+                 sh "docker build -t test_stage -f ./test/Dockerfile ."
             }
         }
 
         stage('Deploy'){
             steps{
                 echo "Deploy stage"
-                sh "docker build --no-cache  -t pong_deploy -f ./deploy/Dockerfile ."
-                sh "docker run --rm pong_deploy"
+                sh "docker build --no-cache  -t deploy_stage -f ./deploy/Dockerfile ."
+                sh "docker run --rm deploy_stage"
             }
-        }
-     
+        }    
     }
-    
+
     post{
         success {
             echo 'Success'
