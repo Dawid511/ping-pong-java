@@ -4,4 +4,4 @@ FROM build_stage
 WORKDIR /deploy
 
 # Komenda uruchamiająca aplikację
-CMD ["java", "-jar", "my-app-1.0.jar"]
+CMD ["java", "-jar", "ping-pong-1.0.jar"]
