@@ -1,5 +1,5 @@
-FROM pong
+FROM build_stage
 
 WORKDIR /ping-pong-java
 
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "my-app.jar"]
