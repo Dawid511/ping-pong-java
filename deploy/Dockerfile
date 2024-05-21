@@ -5,6 +5,8 @@ FROM build_stage
 
 RUN pwd
 
+RUN cd deploy
+
 RUN ls -la
 
 
