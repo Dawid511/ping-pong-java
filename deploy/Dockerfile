@@ -2,7 +2,7 @@ FROM build_stage
 
 # Ustawienie katalogu roboczego na /deploy
 #WORKDIR /
-
+COPY my-app-1.0.jar /ping-pong-java/
 RUN pwd
 RUN ls -la deploy
 RUN cd deploy
