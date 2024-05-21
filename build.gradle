@@ -3,7 +3,7 @@ apply plugin: 'application'
 
 archivesBaseName = "ping-pong"
 version = '1.0'
-mainClassName = "com.mypackage.MyClass" // Zaktualizuj to na swoją główną klasę
+mainClassName = "com.mypackage.App"
 
 repositories {
     mavenCentral()

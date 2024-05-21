@@ -1,3 +1,5 @@
+package com.mypackage;
+
 import java.io.Console;
 import java.util.List;
 
