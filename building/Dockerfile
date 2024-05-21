@@ -12,14 +12,14 @@ RUN apt-get install git -y && \
 # Pobranie repozytorium z GitHuba
 RUN git clone https://github.com/Dawid511/ping-pong-java
 
-# Ustawienie katalogu roboczego na ping-pong-java
-WORKDIR /ping-pong-java
+# Ustawienie katalogu roboczego na app
+WORKDIR /app
 
 # Budowa projektu Gradle
 RUN gradle build
 
 # Skopiowanie pliku JAR do katalogu docelowego
-RUN mkdir -p /app &&  cp build/libs/*.jar /deploy.jar
+RUN  cp build/libs/*.jar /deploy
 
 # Czyszczenie pamięci podręcznej pakietów APT
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
