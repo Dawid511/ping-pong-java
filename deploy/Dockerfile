@@ -1,7 +1,7 @@
 FROM build_stage
 
 # Ustawienie katalogu roboczego na /deploy
-WORKDIR /deploy
+WORKDIR /build/libs
 
 # Komenda uruchamiająca aplikację
-CMD ["java", "-jar", "ping-pong-1.0.jar"]
+CMD ["java", "-jar", "my-app-1.0.jar"]
