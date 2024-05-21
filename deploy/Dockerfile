@@ -1,5 +1,5 @@
 FROM build_stage
 
-WORKDIR /ping-pong-java
+WORKDIR /deploy
 
 CMD ["java", "-jar", "my-app.jar"]
