@@ -5,8 +5,6 @@ WORKDIR /build/libs
 
 RUN ls -la
 
-RUN ls -la build/libs
-
 RUN ls -la deploy
 
 # Komenda uruchamiająca aplikację
