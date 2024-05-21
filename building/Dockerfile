@@ -25,7 +25,7 @@ RUN gradle build
 RUN ls -la build/libs
 
 # Skopiowanie pliku JAR do katalogu docelowego
-RUN cp build/libs/*.jar /deploy
+RUN mkdir -p /deploy && cp build/libs/*.jar /deploy/my-app.jar
 
 # Czyszczenie pamięci podręcznej pakietów APT
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
