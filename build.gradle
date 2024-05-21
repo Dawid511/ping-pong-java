@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "ping-pong"
+archivesBaseName = "my-app"
 version = '1.0'
 mainClassName = "App"
 
@@ -11,4 +11,10 @@ repositories {
 
 dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+
+jar {
+    baseName = 'my-app'
+    version = project.version
 }
