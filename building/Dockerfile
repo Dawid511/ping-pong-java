@@ -27,5 +27,7 @@ RUN ls -la build/libs
 # Skopiowanie pliku JAR do katalogu docelowego
 RUN mkdir -p /deploy && cp build/libs/*.jar /deploy/my-app.jar
 
+RUN ls -la deploy
+
 # Czyszczenie pamięci podręcznej pakietów APT
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
