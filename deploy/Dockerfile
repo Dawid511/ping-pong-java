@@ -1,5 +1,7 @@
 FROM build_stage
 
-WORKDIR /merged
+# Ustawienie katalogu roboczego na /deploy
+WORKDIR /deploy
 
-CMD ["java", "-jar", "my-app.jar"]
+# Komenda uruchamiająca aplikację
+CMD ["java", "-jar", "my-app-1.0.jar"]
