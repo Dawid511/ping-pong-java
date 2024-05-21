@@ -4,8 +4,10 @@ FROM build_stage
 #WORKDIR /
 
 RUN pwd
-
+RUN ls -la deploy
 RUN cd deploy
+RUN pwd
+
 
 RUN ls -la
 
