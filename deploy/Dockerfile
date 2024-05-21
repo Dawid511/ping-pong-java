@@ -1,5 +1,5 @@
 FROM build_stage
 
-WORKDIR /deploy
+WORKDIR /merged
 
 CMD ["java", "-jar", "my-app.jar"]
