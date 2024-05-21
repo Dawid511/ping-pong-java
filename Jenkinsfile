@@ -26,6 +26,7 @@ agent any
         stage('Build') {
             steps {
                 echo "Build stage"
+                sh './gradlew clean build'
                 sh "docker build -t build_stage -f ./building/Dockerfile ."
             }
         }
@@ -34,6 +35,13 @@ agent any
             steps {
                 echo "Test stage"
                  sh "docker build -t test_stage -f ./test/Dockerfile ."
+            }
+        }
+
+        stage('Prepare Deploy') {
+            steps {
+                echo "Prepare Deploy stage"
+                sh 'cp build/libs/my-app-1.0.jar deploy/'
             }
         }
 
