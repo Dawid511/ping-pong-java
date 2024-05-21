@@ -26,7 +26,7 @@ agent any
         stage('Build') {
             steps {
                 echo "Build stage"
-                sh './gradlew clean build'
+               
                 sh "docker build -t build_stage -f ./building/Dockerfile ."
             }
         }

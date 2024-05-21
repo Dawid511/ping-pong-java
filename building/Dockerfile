@@ -17,3 +17,9 @@ WORKDIR /ping-pong-java
 
 # Budowa projektu Gradle
 RUN gradle build
+
+# Skopiowanie pliku JAR do katalogu docelowego
+RUN cp build/libs/*.jar /app/my-app.jar
+
+# Czyszczenie pamięci podręcznej pakietów APT
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
