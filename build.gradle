@@ -16,7 +16,7 @@ dependencies {
 jar {
     manifest {
         attributes(
-            'Main-Class': mainClassName
+            'Main-Class': com.package.App
         )
     }
     baseName = 'my-app'
