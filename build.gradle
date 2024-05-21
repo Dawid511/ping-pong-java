@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "ping-pong"
+archivesBaseName = "my-app"
 version = '1.0'
 mainClassName = "com.mypackage.App"
 
@@ -16,7 +16,6 @@ dependencies {
 jar {
     manifest {
         attributes(
-            'Class-Path': configurations.compile,
             'Main-Class': mainClassName
         )
     }
