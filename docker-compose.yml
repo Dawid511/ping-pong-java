@@ -9,6 +9,6 @@ services:
   service2:
     build:
       context: ./test/
-      dockerfile: Dockerfile2
+      dockerfile: Dockerfile
     depends_on:
       - service1

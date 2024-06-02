@@ -38,13 +38,6 @@ agent any
             }
         }
 
-        stage('Prepare Deploy') {
-            steps {
-                echo "Prepare Deploy stage"
-                sh 'cp build/libs/my-app-1.0.jar deploy/'
-            }
-        }
-
         stage('Deploy'){
             steps{
                 echo "Deploy stage"
